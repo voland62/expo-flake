@@ -29,19 +29,22 @@
         platformToolsVersion = "35.0.2";
         # buildToolsVersions = [ buildToolsVersion "33.0.1" ];
         buildToolsVersions = [ buildToolsVersion ];
-        includeEmulator = true;
+        includeEmulator = false;
         emulatorVersion = "35.6.2";
         platformVersions = [ platformVersion ];
         includeSources = false;
-        includeSystemImages = true;
+        
+        includeSystemImages = false;
         # systemImageTypes = [ "google_apis_playstore" ];
         # systemImageTypes = [ "aosp_atd" ];
-        systemImageTypes = [ "default"
-                             "google_apis"
-                           ];
+
+        # systemImageTypes = [ "default"
+        #                     "google_apis"
+        #                   ];
         # systemImageTypes = [ "google_atd" ];
+        
         # abiVersions = [ "armeabi-v7a" "arm64-v8a" ];
-        abiVersions = [  "arm64-v8a" "x86_64" ];
+        # abiVersions = [  "arm64-v8a" "x86_64" ];
         # abiVersions = [ "armeabi-v7a"];
         # abiVersions = [ "x86_64" ];
         cmakeVersions = [ "3.10.2" "3.22.1" ];
@@ -69,13 +72,13 @@
       };
       androidComposition = androidEnv.composeAndroidPackages my-androidComposition-args;
       sdk = androidComposition.androidsdk;
-      androidEmulator = androidEnv.emulateApp {
-        name = "android-sdk-emulator-demo";
-        configOptions = {
-          "hw.keyboard" = "yes";
-        };
-        sdkExtraArgs = my-androidComposition-args; # sdkArgs;
-      };
+      # androidEmulator = androidEnv.emulateApp {
+      #   name = "android-sdk-emulator-demo";
+      #   configOptions = {
+      #     "hw.keyboard" = "yes";
+      #   };
+      #   sdkExtraArgs = my-androidComposition-args; # sdkArgs;
+      # };
     in
     {
       devShell = pkgs.mkShell rec {
@@ -85,7 +88,7 @@
           sdk
           pkg-config
           nodejs
-          androidEmulator
+          # androidEmulator
         ];
 
         JAVA_HOME = pinnedJDK;
