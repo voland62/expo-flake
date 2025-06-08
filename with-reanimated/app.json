@@ -1,0 +1,7 @@
+{
+  "name": "with-reanimated",
+  "slug": "with-reanimated",
+  "android": {
+    "package": "com.anonymous.withreanimated"
+  }
+}

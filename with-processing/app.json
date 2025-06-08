@@ -1,0 +1,7 @@
+{
+  "name": "with-processing",
+  "slug": "with-processing",
+  "android": {
+    "package": "com.anonymous.withprocessing"
+  }
+}

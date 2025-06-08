@@ -1,0 +1,26 @@
+{
+  "dependencies": {
+    "@apollo/client": "^3.4.16",
+    "@apollo/link-context": "^2.0.0-beta.3",
+    "@react-native-picker/picker": "2.11.0",
+    "expo": "^53.0.4",
+    "graphql": "^15.0.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "react-native": "0.79.1",
+    "react-native-web": "^0.20.0",
+    "@expo/metro-runtime": "~5.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.3"
+  },
+  "name": "with-apollo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web"
+  }
+}

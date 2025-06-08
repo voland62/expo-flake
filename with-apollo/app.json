@@ -1,0 +1,7 @@
+{
+  "name": "with-apollo",
+  "slug": "with-apollo",
+  "android": {
+    "package": "com.anonymous.withapollo"
+  }
+}
